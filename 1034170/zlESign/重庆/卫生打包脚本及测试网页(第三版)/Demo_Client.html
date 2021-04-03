@@ -1,0 +1,761 @@
+<object id="ezca" width="" height="" classid="clsid:C538AA4C-73A8-4069-B466-DF2D71FDCDAF">
+</object>
+<html>
+	<head>
+		<title>test</title>
+		<script type="text/javascript" src="demo.js">
+		</script>
+	</head>
+	<body>
+		<LINK rel=stylesheet type=text/css href="css.css">
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=listmenutxt>
+					<TD></TD>
+				</TR>
+				<TR class=listmenutxt>
+					<TD class=menutxt background="" align=middle>
+						卫生接口应用演示(证书应用综合服务接口客户端接口函数)
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<!-- 获取接口版本信息 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获取版本信息:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT id="SOF_GetVersion" type="button" style='width:180px;' value="获取版本信息" onclick="SOF_GetVersion1();">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						检查控件支持:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT id="SOF_GetVersion" type="button" style='width:180px;' value="检查控件支持" onclick="SOF_CheckSupport();">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+	<!-- 获取接口版本信息 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						设置签名算法:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="设置"
+							onclick="SOF_SetSignMethod1()">
+					</TD>
+
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+		<!-- 获得当前签名算法 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获取签名算法:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetSignMethod1()">
+					</TD>
+
+				</TR>
+			</TBODY>
+		</TABLE>
+	
+		
+		<!-- 设置加密算法 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						设置加密算法:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="设置"
+							onclick="SOF_SetEncryptMethod1()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+		<!-- 获得加密算法 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获取加密算法:
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetEncryptMethod1()">
+					</TD>
+
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+
+		<!-- 获得证书列表 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获取证书列表:
+					</TD>
+					
+					<TD>
+						证书列表(输出):<INPUT  id="SOF_GetUserList" value="" style='width:600px;'>
+					</TD>
+
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetUserList1()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+		
+		<!-- 导出用户签名证书 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						导出用户签名证书:
+					</TD>
+					<td>
+						证书ID：<input type="text" id="certid1" style='width:300px;'>
+					</td>
+					
+					<TD>
+						签名证书(输出):<INPUT  id="SOF_ExportUserCert2" value="" style='width:300px;'>
+					</TD>
+
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="导出"
+							onclick="SOF_ExportUserCert1()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+
+		<!-- 校验证书口令 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						校验证书口令:
+					</TD>
+					<td>
+						证书ID：<input type="text" ID="certid2" style='width:300px;'>
+					</td>
+					<td>
+						密码：<input type="text" ID="passwd1" style='width:300px;'>
+					</td>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="校验"
+							onclick="SOF_Login()">
+					</TD>
+				
+				</TR>
+			</TBODY>
+		</TABLE>
+		 
+		<!-- 修改证书口令 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						修改证书口令:
+					</TD>
+					<TD>
+						证书实体标识(输入):<INPUT  id="SOF_ChangePassWd1" value="" style='width:200px;'>
+					</TD>
+					<TD>
+						旧口令(输入):<INPUT  id="SOF_ChangePassWd2" value="" style='width:200px;'>
+					</TD>
+					<TD>
+						新口令(输入):<INPUT  id="SOF_ChangePassWd3" value="" style='width:200px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="修改"
+							onclick="SOF_ChangePassWd()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+		<!-- 导出用户加密证书 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						导出用户加密证书:
+					</TD>
+					
+					<TD>
+						证书实体标识(输入)：<INPUT  id="SOF_ExportExChangeUserCert1" value="" style='width:300px;'>
+					</TD>
+					<TD>
+						导出的加密证书(输出)：<INPUT  id="SOF_ExportExChangeUserCert2" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="导出"
+							onclick="SOF_ExportExChangeUserCert()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		
+		<!-- 获得证书信息 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获得证书信息:
+					</TD>
+					
+					<TD>
+						证书实体(输入)：<INPUT  id="SOF_GetCertInfo1" value="" style='width:300px;'>
+					</TD>
+					<td>获取信息的类型
+						<select ID="SOF_GetCertInfo2">
+							<option value="1" selected>证书版本
+							<option value="2">证书序列号
+							<option value="3">证书签名算法标识
+							<option value="4">证书颁发者国家(C)
+							<option value="5">证书颁发者组织名(O)
+							<option value="6">证书颁发者部门名(OU)
+							<option value="7">证书颁发者所在的省、自治区、直辖市(S)
+							<option value="8">证书颁发者通用名称(CN)
+							<option value="9">证书颁发者所在的城市、地区(L)
+							<option value="16">证书颁发者Email
+							<option value="17">证书有效期：起始日期
+							<option value="18">证书有效期：终止日期
+							<option value="19">证书拥有者国家(C )
+							<option value="20">证书拥有者组织名(O)
+							<option value="21">证书拥有者部门名(OU)
+							<option value="22">证书拥有者所在的省、自治区、直辖市(S)
+							<option value="23">证书拥有者通用名称(CN)
+							<option value="24">证书拥有者所在的城市、地区(L)
+							<option value="25">证书拥有者Email
+							<option value="32">证书颁发者DN
+							<option value="33">证书拥有者DN
+							<option value="34">证书公钥信息
+							<option value="35">证书扩展项信息
+							<option value="36">颁发者密钥标识符
+							<option value="37">证书持有者密钥标识符
+							<option value="38">密钥用途
+							<option value="39">私钥有效期
+							<option value="40">证书策略
+							<option value="41">策略映射
+							<option value="48">基本限制
+							<option value="49">策略限制
+							<option value="50">扩展密钥用途
+							<option value="51">CRL发布点
+							<option value="52">netscape属性
+							<option value="53">证书实体唯一标识
+							<option value="54">个人身份证号码
+							<option value="55">个人社会保险号
+							<option value="56">企业工商注册号
+							<option value="57">企业组织机构代码
+							<option value="64">税务登记证号
+						</select>
+					</td>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetCertInfo()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<!-- 获得证书扩展信息 -->
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获得证书扩展信息:
+					</TD>
+					
+					<TD>
+						证书实体(输入)：<INPUT  id="SOF_GetCertInfoByOid1" value="" style='width:300px;'>
+					</TD>
+					<TD>
+						私有扩展对象ID(输入)：<INPUT  id="SOF_GetCertInfoByOid2" value="1.2.86.21.1.1" style='width:300px;'>
+					</TD>
+					<TD>
+						证书扩展信息(输出)：<INPUT  id="SOF_GetCertInfoByOid3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetCertInfoByOid()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						获得用户信息:
+					</TD>
+					
+					<TD>
+						证书实体标识(输入)：<INPUT  id="SOF_GetUserInfo1" value="" style='width:300px;'>
+					</TD>
+					<TD>
+						信息类别(输入)：
+						<select id="SOF_GetUserInfo2">
+							<option value="1" selected>用户名
+							<option value="2">证书实体唯一标识
+							<option value="3">部门
+							<option value="4">颁发者DN
+							<option value="8">证书介质类型
+							<option value="9">CA类型
+							<option value="10">用户证书密钥类型，（双证或单证）
+							<option value="13">用户证书介质名称
+							<option value="14">用户证书介质提供者即csp名称
+							<option value="15">用户证书介质附加库
+							<option value="16">用户签名证书路径
+							<option value="17">用户加密证书路径
+							<option value="18">用户签名P12证书路径
+							<option value="19">用户加密P12证书路径
+							<option value="22">用户证书UniqueID的OID
+						</select>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_GetUserInfo()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						验证证书有效性:
+					</TD>
+					<TD>
+						证书实体标识(输入)：<INPUT  id="SOF_ValidateCert1" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="获取"
+							onclick="SOF_ValidateCert()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						数据签名:
+					</TD>
+					<TD>
+						证书实体标识(输入)：<INPUT  id="SOF_SignData1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文(输入)：<INPUT  id="SOF_SignData2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名结果(输出)：<INPUT  id="SOF_SignData3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="签名" onclick="SOF_SignData()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						验证签名:
+					</TD>
+					<TD>
+						签名者证书(输入)：<INPUT  id="SOF_VerifySignedData1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文(输入)：<INPUT  id="SOF_VerifySignedData2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名值(输入)：<INPUT  id="SOF_VerifySignedData3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="验证签名" onclick="SOF_VerifySignedData()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						文件签名:
+					</TD>
+					<TD>
+						证书标识(输入)：<INPUT  id="SOF_SignFile1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文文件路径(输入)：<input type="file" ID="SOF_SignFile2">
+					</TD>
+					<TD>
+						签名结果(输出)：<INPUT  id="SOF_SignFile3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="签名" onclick="SOF_SignFile()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						验证文件签名:
+					</TD>
+					<TD>
+						签名者证书(输入)：<INPUT  id="SOF_VerifySignedFile1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文文件路径(输入)：<input type="file" ID="SOF_VerifySignedFile2">
+					</TD>
+					<TD>
+						签名值(输入)：<INPUT  id="SOF_VerifySignedFile3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="验证签名" onclick="SOF_VerifySignedFile()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						加密数据:
+					</TD>
+					<TD>
+						加密密钥(输入)：<INPUT  id="SOF_EncryptData1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待加密的明文(输入)：<INPUT  id="SOF_EncryptData2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						加密后的密文(输出)：<INPUT  id="SOF_EncryptData3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="加密数据" onclick="SOF_EncryptData()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						解密数据:
+					</TD>
+					<TD>
+						解密密钥(输入)：<INPUT  id="SOF_DecryptData1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待解密的密文(输入)：<INPUT  id="SOF_DecryptData2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						解密后的明文(输出)：<INPUT  id="SOF_DecryptData3" value="" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="解密数据" onclick="SOF_DecryptData()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						文件加密:
+					</TD>
+					<TD>
+						加密密钥(输入)：<INPUT  id="SOF_EncryptFile1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待加密的明文文件路径(输入)：<INPUT  id="SOF_EncryptFile2" type="file" style='width:200px;'>
+					</TD>
+					<TD>
+						密文文件保存路径(输出)：<INPUT  id="SOF_EncryptFile3" type="file" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="文件加密" onclick="SOF_EncryptFile()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						文件解密:
+					</TD>
+					<TD>
+						解密密钥(输入)：<INPUT  id="SOF_DecryptFile1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待解密的密文文件路径(输入)：<INPUT  id="SOF_DecryptFile2" type="file" style='width:200px;'>
+					</TD>
+					<TD>
+						明文文件保存路径(输出)：<INPUT  id="SOF_DecryptFile3" type="file" style='width:300px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="文件解密" onclick="SOF_DecryptFile()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						公钥加密:
+					</TD>
+					<TD>
+						证书(输入)：<INPUT  id="SOF_PubKeyEncrypt1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待加密的数据(输入)：<INPUT  id="SOF_PubKeyEncrypt2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						成功加密后的密文(输出)：<INPUT  id="SOF_PubKeyEncrypt3" value="" style='width:100px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="公钥加密" onclick="SOF_PubKeyEncrypt()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						私钥解密:
+					</TD>
+					<TD>
+						证书ID(输入)：<INPUT  id="SOF_PriKeyDecrypt1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						待解密的数据(输入)：<INPUT  id="SOF_PriKeyDecrypt2" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						成功解密后的明文(输出)：<INPUT  id="SOF_PriKeyDecrypt3" value="" style='width:100px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="私钥解密" onclick="SOF_PriKeyDecrypt()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						PKCS#7数据签名:
+					</TD>
+					<TD>
+						证书标识(输入)：<INPUT  id="SOF_SignDataByP71" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文(输入)：<INPUT  id="SOF_SignDataByP72" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名结果(输出)：<INPUT  id="SOF_SignDataByP73" value="" style='width:100px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="PKCS#7数据签名" onclick="SOF_SignDataByP7()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						验证PKCS#7数据签名:
+					</TD>
+					<TD>
+						PKCS#7签名包(输入)：<INPUT  id="SOF_VerifySignedDataByP71" value="" style='width:700px;'>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="验证PKCS#7数据签名" onclick="SOF_VerifySignedDataByP7()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						解析PKCS#7签名包信息:
+					</TD>
+					<TD>
+						PKCS#7签名包(输入)：<INPUT  id="SOF_GetP7SignDataInfo1" value="" style='width:500px;'>
+					</TD>
+					<TD>
+						类型:
+						<select id='SOF_GetP7SignDataInfo2' style='width:100px;'>
+							<option value="1" selected>原文
+							<option value="2">签名者证书
+							<option value="3">签名值
+						</select>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="PKCS#7数据签名" onclick="SOF_GetP7SignDataInfo()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						XML数据签名:
+					</TD>
+					<TD>
+						证书标识(输入)：<INPUT  id="SOF_SignDataXML1" value="" style='width:100px;'>
+					</TD>
+					<TD>
+						签名原文,XML格式(输入)：<textarea id="SOF_SignDataXML2" rows="10" cols="40"></textarea>
+					</TD>
+					<TD>
+						证书标识(输出)：<textarea id="SOF_SignDataXML3" rows="10" cols="30"></textarea>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="XML数据签名" onclick="SOF_SignDataXML()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						验证XML数据签名:
+					</TD>
+					<TD>
+						XML签名值(输入)：<textarea id="SOF_VerifySignedDataXML1" rows="10" cols="100"></textarea>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="验证XML数据签名" onclick="SOF_VerifySignedDataXML()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						解析XML签名数据:
+					</TD>
+					<TD>
+						XML格式的签名数据(输入)：<textarea id="SOF_GetXMLSignatureInfo1" rows="10" cols="70"></textarea>
+					</TD>
+					<TD>
+						待解析的参数类型:
+						<select id="SOF_GetXMLSignatureInfo2">
+							<option value="1" selected>xml原文
+							<option value="2">摘要
+							<option value="3">签名值
+							<option value="4">签名证书
+							<option value="5">摘要算法
+							<option value="6">签名算法
+						</select>
+					</TD>
+					<TD width="200px" align="left">
+						<INPUT type="button" style='width:180px;' value="解析XML签名数据" onclick="SOF_GetXMLSignatureInfo()">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+		<TABLE border=0 cellSpacing=1 cellPadding=0 width="100%"
+			bgColor=#c4d0d6>
+			<TBODY>
+				<TR class=bodytxt>
+					<TD width="100px" align="left">
+						产生随机数:
+					</TD>
+					<td>
+						待产生的随机数长度（bytes，字节长度）:<input type="text" id="SOF_GenRandom1" value="128" style="width:500px">
+					</td>
+					<TD width="200px" align="left">
+						<INPUT id="SOF_GetVersion" type="button" style='width:180px;' value="产生随机数" onclick="SOF_GenRandom();">
+					</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+	</BODY>
+</HTML>

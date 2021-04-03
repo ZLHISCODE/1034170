@@ -1,0 +1,14 @@
+clsPublicBlood = 52, 52, 1354, 595, 
+mdlPublic = 0, 0, 0, 0, C
+usrCardEdit = 0, 0, 0, 0, C, 234, 234, 1410, 777, C
+usrCardPeople = 0, 0, 1279, 540, , 260, 260, 1413, 800, C
+frmBloodPeoPle = 26, 26, 1202, 569, , 208, 208, 1384, 751, C
+frmBloodReaction = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmBloodReactionRecord = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+mdlBlood = 0, 0, 0, 0, C
+mdlPubDefine = 0, 0, 0, 0, C
+frmBloodReceivesRecord = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+clsVsf = 0, 0, 0, 0, C
+frmBloodVerification = 130, 130, 1306, 673, , 104, 104, 1280, 647, C
+frmBloodExec = 0, 0, 1176, 543, Z, 0, 0, 0, 0, C
+frmBloodExecEdit = 0, 0, 0, 0, C, 0, 0, 0, 0, C

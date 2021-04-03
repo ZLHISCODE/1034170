@@ -1,0 +1,13 @@
+setup.exe里面封装了时间控件time.dll、time.tlb，time.dll有一个接口函数catime()，
+1.安装setup.exe文件，安装后Com库自动注册。
+2.手工注册控件，运行命令：regasm xxx\time.dll /tlb:xxx\time.tlb /codebase
+3.VB调用方法
+Dim gxcatime As New time.gxca
+Text1.Text = gxcatime.catime()
+
+Dim gxtime As Object
+Set gxtime = CreateObject("time.gxca")
+Text1.Text = gxtime.catime() 
+
+返回的是时间明文，如果找不到时间、则返回字符"0"。
+gxcatime.ini文件是时间服务器的参数配置文件，配置文件目前是按照民族医院的具体参数，配置文件有医院提供相关参数我们生成的，放到应用程序的C:\WINDOWS目录下就可以了。

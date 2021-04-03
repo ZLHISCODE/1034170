@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns="http://service.wondersgroup.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://service.wondersgroup.com">
+    <wsdl:documentation>PersonInfoService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.wondersgroup.com">
+            <xs:complexType name="Exception">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="putPersonInfo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="FieldStr" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPersonInfoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPersonInfoStr">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="SearchType" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ParamValue" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPersonInfoStrResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPersonInfo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="getPersonInfo" nillable="true" type="xs:anyType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPersonInfoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:anyType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="putPersonInfoRequest">
+        <wsdl:part name="parameters" element="ns:putPersonInfo"/>
+    </wsdl:message>
+    <wsdl:message name="putPersonInfoResponse">
+        <wsdl:part name="parameters" element="ns:putPersonInfoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonInfoRequest">
+        <wsdl:part name="parameters" element="ns:getPersonInfo"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonInfoResponse">
+        <wsdl:part name="parameters" element="ns:getPersonInfoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonInfoStrRequest">
+        <wsdl:part name="parameters" element="ns:getPersonInfoStr"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonInfoStrResponse">
+        <wsdl:part name="parameters" element="ns:getPersonInfoStrResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="PersonInfoServicePortType">
+        <wsdl:operation name="putPersonInfo">
+            <wsdl:input message="ns:putPersonInfoRequest" wsaw:Action="urn:putPersonInfo"/>
+            <wsdl:output message="ns:putPersonInfoResponse" wsaw:Action="urn:putPersonInfoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfo">
+            <wsdl:input message="ns:getPersonInfoRequest" wsaw:Action="urn:getPersonInfo"/>
+            <wsdl:output message="ns:getPersonInfoResponse" wsaw:Action="urn:getPersonInfoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfoStr">
+            <wsdl:input message="ns:getPersonInfoStrRequest" wsaw:Action="urn:getPersonInfoStr"/>
+            <wsdl:output message="ns:getPersonInfoStrResponse" wsaw:Action="urn:getPersonInfoStrResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="PersonInfoServiceSoap11Binding" type="ns:PersonInfoServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="putPersonInfo">
+            <soap:operation soapAction="urn:putPersonInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfoStr">
+            <soap:operation soapAction="urn:getPersonInfoStr" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfo">
+            <soap:operation soapAction="urn:getPersonInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PersonInfoServiceSoap12Binding" type="ns:PersonInfoServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="putPersonInfo">
+            <soap12:operation soapAction="urn:putPersonInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfoStr">
+            <soap12:operation soapAction="urn:getPersonInfoStr" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfo">
+            <soap12:operation soapAction="urn:getPersonInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PersonInfoServiceHttpBinding" type="ns:PersonInfoServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="putPersonInfo">
+            <http:operation location="PersonInfoService/putPersonInfo"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="putPersonInfo"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="putPersonInfo"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfoStr">
+            <http:operation location="PersonInfoService/getPersonInfoStr"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getPersonInfoStr"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getPersonInfoStr"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonInfo">
+            <http:operation location="PersonInfoService/getPersonInfo"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getPersonInfo"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getPersonInfo"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="PersonInfoService">
+        <wsdl:port name="PersonInfoServiceHttpSoap11Endpoint" binding="ns:PersonInfoServiceSoap11Binding">
+            <soap:address location="http://10.67.48.85:8888/jzk2/services/PersonInfoService.PersonInfoServiceHttpSoap11Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="PersonInfoServiceHttpSoap12Endpoint" binding="ns:PersonInfoServiceSoap12Binding">
+            <soap12:address location="http://10.67.48.85:8888/jzk2/services/PersonInfoService.PersonInfoServiceHttpSoap12Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="PersonInfoServiceHttpEndpoint" binding="ns:PersonInfoServiceHttpBinding">
+            <http:address location="http://10.67.48.85:8888/jzk2/services/PersonInfoService.PersonInfoServiceHttpEndpoint"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

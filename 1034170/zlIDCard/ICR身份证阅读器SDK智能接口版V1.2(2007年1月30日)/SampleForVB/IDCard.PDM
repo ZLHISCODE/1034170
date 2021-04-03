@@ -1,0 +1,538 @@
+[Root]
+Most Recent Package=ICR-SDK
+
+
+[Package|IDCard|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\IDCard\包
+
+[Package|IDCard|Configure DAO ISAMs]
+Applicable=No
+
+[Package|IDCard|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|IDCard|Files Found]
+
+[Package|IDCard|Files Released]
+
+[Package|IDCard|Missing Dependency Information]
+
+[Package|IDCard|Out-of-Date Dependency Information]
+
+[Package|IDCard|Files Added]
+d:\idcard\icr100c.cfg=
+
+[Package|IDCard|Files Removed]
+
+[Package|IDCard|Files In Project]
+D:\IDCard\IDCard.exe=Yes
+D:\WINNT\system32\msvbvm60.dll=Yes
+D:\WINNT\system32\oleaut32.dll=Yes
+D:\WINNT\system32\olepro32.dll=Yes
+D:\WINNT\system32\asycfilt.dll=Yes
+D:\WINNT\system32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINNT\system32\VB6CHS.DLL=Yes
+D:\IDCard\libwlt.dll=Yes
+D:\WINNT\system32\MSCOMM32.OCX=Yes
+D:\WINNT\system32\MSCOMCHS.DLL=Yes
+D:\WINNT\system32\MSCOMCTL.OCX=Yes
+D:\WINNT\system32\MSCMCCHS.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINNT\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\IDCard\icr100c.cfg=Yes
+
+[Package|IDCard|Configure Registry Files]
+Applicable=No
+
+[Package|IDCard|Configure Remote Servers]
+Applicable=No
+
+[Package|IDCard|Install Locations]
+D:\IDCard\IDCard.exe=$(AppPath)
+D:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+D:\IDCard\libwlt.dll=$(WinSysPath)
+D:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+D:\WINNT\system32\MSCOMCHS.DLL=$(WinSysPath)
+D:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+D:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\IDCard\icr100c.cfg=$(AppPath)
+
+[Package|IDCard|Configure Shared Files]
+Applicable=Yes
+D:\IDCard\IDCard.exe=No
+D:\IDCard\icr100c.cfg=No
+
+[Package|IDCard|Distribution]
+Type=single
+Size=
+Title=身份证阅读通讯程序
+
+[Package|IDCard|IconGroups]
+Group0=$(Programs)
+PrivateGroup0=True
+Parent0=
+
+[Package|IDCard|$(Programs)]
+Icon1=IDCard.exe
+Title1=身份证阅读通讯程序
+StartIn1=$(AppPath)
+Key1=Icon4
+
+[Package|IDCard|Package]
+PackageFolder=D:\IDCard\包
+ProjectFolder=D:\IDCard
+ServerSideCab=
+File1=D:\IDCard\包\setup.exe
+File2=D:\IDCard\包\Setup.Lst
+File3=D:\IDCard\包\IDCard.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|ICR-100|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\ICR-100\ICR-100安装程序
+
+[Package|ICR-100|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ICR-100|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ICR-100|Files Found]
+
+[Package|ICR-100|Files Released]
+
+[Package|ICR-100|Missing Dependency Information]
+
+[Package|ICR-100|Out-of-Date Dependency Information]
+
+[Package|ICR-100|Files Added]
+d:\icr-100\icr100c.cfg=
+
+[Package|ICR-100|Files Removed]
+
+[Package|ICR-100|Files In Project]
+D:\ICR-100\IDCard.exe=Yes
+D:\WINNT\system32\msvbvm60.dll=Yes
+D:\WINNT\system32\oleaut32.dll=Yes
+D:\WINNT\system32\olepro32.dll=Yes
+D:\WINNT\system32\asycfilt.dll=Yes
+D:\WINNT\system32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINNT\system32\VB6CHS.DLL=Yes
+D:\ICR-100\libwlt.dll=Yes
+D:\WINNT\system32\MSCOMM32.OCX=Yes
+D:\WINNT\system32\MSCOMCHS.DLL=Yes
+D:\WINNT\system32\MSCOMCTL.OCX=Yes
+D:\WINNT\system32\MSCMCCHS.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINNT\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\ICR-100\icr100c.cfg=Yes
+
+[Package|ICR-100|Configure Registry Files]
+Applicable=No
+
+[Package|ICR-100|Configure Remote Servers]
+Applicable=No
+
+[Package|ICR-100|Install Locations]
+D:\ICR-100\IDCard.exe=$(AppPath)
+D:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+D:\ICR-100\libwlt.dll=$(WinSysPath)
+D:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+D:\WINNT\system32\MSCOMCHS.DLL=$(WinSysPath)
+D:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+D:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\ICR-100\icr100c.cfg=$(AppPath)
+
+[Package|ICR-100|Configure Shared Files]
+Applicable=Yes
+D:\ICR-100\IDCard.exe=No
+D:\ICR-100\icr100c.cfg=No
+
+[Package|ICR-100|Distribution]
+Type=single
+Size=
+Title=ICR-100身份证阅读通讯程序
+
+[Package|ICR-100|Package]
+PackageFolder=D:\ICR-100\ICR-100安装程序
+ProjectFolder=D:\ICR-100
+ServerSideCab=
+File1=D:\ICR-100\ICR-100安装程序\setup.exe
+File2=D:\ICR-100\ICR-100安装程序\Setup.Lst
+File3=D:\ICR-100\ICR-100安装程序\IDCard.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|ICR-100|IconGroups]
+Group0=$(Programs)
+PrivateGroup0=True
+Parent0=
+
+[Package|ICR-100|$(Programs)]
+Icon1=IDCard.exe
+Title1=ICR-100身份证阅读通讯程序
+StartIn1=$(AppPath)
+Key1=Icon3
+
+
+[Package|ICR-100TYPEB|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\ICR-100Typeb\ICR-100安装程序
+
+[Package|ICR-100TYPEB|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ICR-100TYPEB|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ICR-100TYPEB|Files Found]
+
+[Package|ICR-100TYPEB|Files Released]
+
+[Package|ICR-100TYPEB|Missing Dependency Information]
+
+[Package|ICR-100TYPEB|Out-of-Date Dependency Information]
+D:\WINNT\system32\Mscomctl.ocx=
+
+[Package|ICR-100TYPEB|Files Added]
+D:\ICR-100Typeb\icr100c.cfg=
+D:\ICR-100Typeb\DLibwlt.dll=
+
+[Package|ICR-100TYPEB|Files Removed]
+
+[Package|ICR-100TYPEB|Files In Project]
+D:\ICR-100Typeb\IDCard.exe=Yes
+D:\WINNT\system32\msvbvm60.dll=Yes
+D:\WINNT\system32\oleaut32.dll=Yes
+D:\WINNT\system32\olepro32.dll=Yes
+D:\WINNT\system32\asycfilt.dll=Yes
+D:\WINNT\system32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINNT\system32\VB6CHS.DLL=Yes
+D:\ICR-100Typeb\typeb.dll=Yes
+D:\WINNT\system32\MSCOMM32.OCX=Yes
+D:\WINNT\system32\MSCOMCHS.DLL=Yes
+D:\WINNT\system32\Mscomctl.ocx=Yes
+D:\WINNT\system32\MSCMCCHS.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINNT\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\ICR-100Typeb\icr100c.cfg=Yes
+D:\ICR-100Typeb\DLibwlt.dll=Yes
+
+[Package|ICR-100TYPEB|Configure Registry Files]
+Applicable=No
+
+[Package|ICR-100TYPEB|Configure Remote Servers]
+Applicable=No
+
+[Package|ICR-100TYPEB|Install Locations]
+D:\ICR-100Typeb\IDCard.exe=$(AppPath)
+D:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINNT\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+D:\ICR-100Typeb\typeb.dll=$(WinSysPath)
+D:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+D:\WINNT\system32\MSCOMCHS.DLL=$(WinSysPath)
+D:\WINNT\system32\Mscomctl.ocx=$(WinSysPath)
+D:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\ICR-100Typeb\icr100c.cfg=$(AppPath)
+D:\ICR-100Typeb\DLibwlt.dll=$(WinSysPath)
+
+[Package|ICR-100TYPEB|Configure Shared Files]
+Applicable=Yes
+D:\ICR-100Typeb\IDCard.exe=No
+D:\ICR-100Typeb\icr100c.cfg=No
+
+[Package|ICR-100TYPEB|Distribution]
+Type=single
+Size=
+Title=ICR-100TYPEB
+
+[Package|ICR-100TYPEB|IconGroups]
+Group0=$(Programs)
+PrivateGroup0=True
+Parent0=
+
+[Package|ICR-100TYPEB|$(Programs)]
+Icon1=IDCard.exe
+Title1=ICR-100TYPEB
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|ICR-100TYPEB|Package]
+PackageFolder=D:\ICR-100Typeb\ICR-100安装程序
+ProjectFolder=D:\ICR-100Typeb
+ServerSideCab=
+File1=D:\ICR-100Typeb\ICR-100安装程序\setup.exe
+File2=D:\ICR-100Typeb\ICR-100安装程序\Setup.Lst
+File3=D:\ICR-100Typeb\ICR-100安装程序\IDCard.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|ICR-100Termb|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\ICR-100Termb\ICR-100Termb安装程序
+
+[Package|ICR-100Termb|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ICR-100Termb|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ICR-100Termb|Files Found]
+
+[Package|ICR-100Termb|Files Released]
+
+[Package|ICR-100Termb|Missing Dependency Information]
+
+[Package|ICR-100Termb|Out-of-Date Dependency Information]
+C:\WINNT\system32\Mscomctl.ocx=
+
+[Package|ICR-100Termb|Files Added]
+d:\icr-100termb\icr100c.cfg=
+D:\ICR-100Termb\DLibwlt.dll=
+
+[Package|ICR-100Termb|Files Removed]
+
+[Package|ICR-100Termb|Files In Project]
+D:\ICR-100Termb\IDCard.exe=Yes
+C:\WINNT\system32\MSVBVM60.DLL=Yes
+C:\WINNT\system32\oleaut32.dll=Yes
+C:\WINNT\system32\olepro32.dll=Yes
+C:\WINNT\system32\asycfilt.dll=Yes
+C:\WINNT\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\VB6CHS.DLL=Yes
+D:\ICR-100Termb\termb.dll=Yes
+C:\WINNT\system32\MSCOMM32.OCX=Yes
+C:\WINNT\system32\MSCOMCHS.DLL=Yes
+C:\WINNT\system32\Mscomctl.ocx=Yes
+C:\WINNT\system32\MSCMCCHS.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\ICR-100Termb\icr100c.cfg=Yes
+D:\ICR-100Termb\DLibwlt.dll=Yes
+
+[Package|ICR-100Termb|Configure Registry Files]
+Applicable=No
+
+[Package|ICR-100Termb|Configure Remote Servers]
+Applicable=No
+
+[Package|ICR-100Termb|Install Locations]
+D:\ICR-100Termb\IDCard.exe=$(AppPath)
+C:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+D:\ICR-100Termb\termb.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCOMCHS.DLL=$(WinSysPath)
+C:\WINNT\system32\Mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\ICR-100Termb\icr100c.cfg=$(AppPath)
+D:\ICR-100Termb\DLibwlt.dll=$(WinSysPath)
+
+[Package|ICR-100Termb|Configure Shared Files]
+Applicable=Yes
+D:\ICR-100Termb\IDCard.exe=No
+D:\ICR-100Termb\icr100c.cfg=No
+
+[Package|ICR-100Termb|Distribution]
+Type=single
+Size=
+Title=ICR-100Termb
+
+[Package|ICR-100Termb|Package]
+PackageFolder=D:\ICR-100Termb\ICR-100Termb安装程序
+ProjectFolder=D:\ICR-100Termb
+ServerSideCab=
+File1=D:\ICR-100Termb\ICR-100Termb安装程序\setup.exe
+File2=D:\ICR-100Termb\ICR-100Termb安装程序\Setup.Lst
+File3=D:\ICR-100Termb\ICR-100Termb安装程序\IDCard.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|ICR-100Termb|IconGroups]
+Group0=$(Programs)
+PrivateGroup0=True
+Parent0=
+
+[Package|ICR-100Termb|$(Programs)]
+Icon1=IDCard.exe
+Title1=ICR-100Termb阅读程序
+StartIn1=$(AppPath)
+Key1=Icon3
+
+
+[Package|ICR-SDK|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=e:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\Setup
+
+[Package|ICR-SDK|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ICR-SDK|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ICR-SDK|Files Found]
+
+[Package|ICR-SDK|Files Released]
+
+[Package|ICR-SDK|Missing Dependency Information]
+
+[Package|ICR-SDK|Out-of-Date Dependency Information]
+C:\WINNT\system32\Mscomctl.ocx=
+
+[Package|ICR-SDK|Files Added]
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\WltRS.dll=
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\sdtapi.dll=
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.lic=
+
+[Package|ICR-SDK|Files Removed]
+
+[Package|ICR-SDK|Files In Project]
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\WINNT\system32\VB6CHS.DLL=Yes
+C:\WINNT\system32\MSCOMM32.OCX=Yes
+C:\WINNT\system32\MSCOMCHS.DLL=Yes
+C:\WINNT\system32\Mscomctl.ocx=Yes
+C:\WINNT\system32\MSCMCCHS.DLL=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\IDCard.exe=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\WltRS.dll=Yes
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\sdtapi.dll=Yes
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.lic=Yes
+
+[Package|ICR-SDK|Configure Registry Files]
+Applicable=No
+
+[Package|ICR-SDK|Configure Remote Servers]
+Applicable=No
+
+[Package|ICR-SDK|Install Locations]
+D:\ICR身份证阅读器SDK400\Sample\IDCard.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+D:\ICR身份证阅读器SDK400\Sample\termb.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCOMCHS.DLL=$(WinSysPath)
+C:\WINNT\system32\Mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\IDCard.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.dll=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\WltRS.dll=$(WinSysPath)
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\sdtapi.dll=$(WinSysPath)
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.lic=$(AppPath)
+
+[Package|ICR-SDK|Configure Shared Files]
+Applicable=Yes
+D:\ICR身份证阅读器SDK400\Sample\IDCard.exe=No
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\IDCard.exe=No
+E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB\termb.lic=No
+
+[Package|ICR-SDK|Distribution]
+Type=single
+Size=
+Title=身份证阅读演示程序
+
+[Package|ICR-SDK|IconGroups]
+Group0=$(Programs)
+PrivateGroup0=-1
+Parent0=
+
+[Package|ICR-SDK|$(Programs)]
+Icon1=IDCard.exe
+Title1=身份证阅读设备演示程序
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|ICR-SDK|Package]
+PackageFolder=e:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\Setup
+ProjectFolder=E:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\SampleForVB
+ServerSideCab=
+File1=e:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\Setup\setup.exe
+File2=e:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\Setup\Setup.Lst
+File3=e:\科研项目\项目开发\身份证阅读器SDK源代码\智能接口SDK V1.1（最终版）\termbRS232ok20051216\Setup\IDCard.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

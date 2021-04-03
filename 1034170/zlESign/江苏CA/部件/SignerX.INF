@@ -1,0 +1,47 @@
+;INF file for SignerX.dll
+;DestDir can be 10 for Windows directory, 11 for Windows\System(32) directory, or left blank for the Occache directory.
+
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Add.Code]
+SignerX.dll=SignerX.dll
+
+[SignerX.dll]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={5C457383-C43E-4F0F-BACD-8CAD3CE597C5}
+DestDir=11
+FileVersion=2,1,0,5
+
+[Setup Hooks]
+AddToRegHook=AddToRegHook
+
+[AddToRegHook]
+InfSection=DefaultInstall
+
+[DefaultInstall]
+CopyFiles=Productsystem.copy.files
+AddReg=AddToRegistry
+
+[DestinationDirs]
+Productsystem.copy.files=11 
+Product.del.files=11     
+
+[Productsystem.copy.files]
+
+[DefaultUninstall]
+;DelFiles=Product.del.files
+;DelReg=Product.Del.Reg
+
+[Product.del.files]
+
+[AddToRegistry]
+;HKLM,"SOFTWARE\Classes\CLSID\{5C457383-C43E-4F0F-BACD-8CAD3CE597C5}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}"
+;HKLM,"SOFTWARE\Classes\CLSID\{5C457383-C43E-4F0F-BACD-8CAD3CE597C5}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}"
+;HKLM,"SOFTWARE\Classes\CLSID\{5C457383-C43E-4F0F-BACD-8CAD3CE597C5}"
+
+
+[Product.Del.Reg]
+;HKLM,"SOFTWARE\Classes\CLSID\{5C457383-C43E-4F0F-BACD-8CAD3CE597C5}"

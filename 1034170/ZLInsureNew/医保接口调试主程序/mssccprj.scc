@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[医保接口测试程序.vbp]
+SCC_Aux_Path = "\\192.168.0.24\vssedition"
+SCC_Project_Name = "$/ZLCommon10/U10.34.0/ZLInsureNew/医保接口调试主程序", PKZIAAAA

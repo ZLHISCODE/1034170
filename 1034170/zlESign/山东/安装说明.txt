@@ -1,0 +1,11 @@
+安装步骤：
+1. 根证书安装：双击"vbdemo_file\SDCA Root Authority.cer"，安装到"受信任的根证书颁发机构"。
+2. 客户端工具：双击"vbdemo_file\客户端\SETUP\山东CA电子印章.exe"
+	a. 包含签名客户端控件及图章处理控件
+	b. 包含Key证书管理工具。
+	c. 安装目录下面包含USBKey驱动文件。
+3. 控件单独安装(如果需要，执行了第2步则不需要)：
+	a. 签名客户端控件：双击"vbdemo_file\客户端\SETUP\JITSecuritytoolv1.0.1.0.exe"
+	b. 图章处理控件：双击"vbdemo_file\客户端\SETUP\imgconvertV1.0.0.1.exe"
+4. 在ZLHIS正式的接口中只支持智能卡证书，因此需要要一个USB Key(缺省口令111111，自动安装驱动。注意不支持Vista，安装USB驱动要蓝屏。不支持虚拟机，签名验证不过)。
+5. 如果调试或演示要使用文件证书，则拷贝"vbdemo_file\服务器端\INI&CERT\servercert\server.cer、Server.pfx"两个文件到ZLHIS安装目录"X:\AppSoft\附加文件"(口令11111111)。

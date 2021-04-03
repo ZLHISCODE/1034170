@@ -1,0 +1,32 @@
+接口文件：
+1. imgconvert.ocx：BMP转换为透明GIF的控件，用于处理签名图章。
+	CreateObject("IMGCONVERT.ImgconvertCtrl.1")
+2. JITSecurityTool.ocx：客户端签名功能控件。
+	CreateObject("JITSECURITYTOOL.JITSecurityToolCtrl.1")
+
+接口函数：
+初始化：
+	1. JIT.initcontrol()
+	2. JIT.readcert(加密证书, 2, "密码", 签名证书, 2, "密码")
+	   智能卡证书="USBCSP://.2CER"
+	   文件证书="FILE://C:\\Windows\\System32\\Server.cer"
+读取证书信息：
+	3. JIT.Subject = 证书主题(CN=耿自峰,OU=I370101198110110083,OU=O101,C=CN) = 人员签名信息.CERTDN
+	4. JIT.SignCertSN = 证书序列号 = 人员签名信息.CERTSN
+	5. JIT.getsigncert() = 签名证书 =人员签名信息.SIGNCERT
+	6. JIT.getcryptcert() = 加密证书 = 人员签名信息.ENCCERT
+签名：
+	7. JIT.SignData(签名证书, "密码","明文",明文长度)
+	   智能卡证书="USBCSP://.2CER"
+	   文件证书="FILE://C:\\Windows\\System32\\Server.pfx"
+	8. JIT.getconten() =  Base64码的密文签名信息
+获取图章(可选)：
+	9. JIT.ShowSinglePic("密码", 0, "临时BMP文件名", 0)
+	10. Imgconvert.Bmp2TransparentGif("临时BMP文件名", "临时GIF文件名", 0)
+签名验证：
+	11. JIT.VerifySign(SignCert, "明文", "明文长度", "签名信息")
+
+问题：
+12. 明文长度是以Byte算，一个汉字算2个？(应该是，我不确定)
+13. Base64码的密文签名信息最大长度？(签名值=175Byte，证书=971Byte)
+14. 没有查看USB证书的方法？(只有在管理工具里面可以查看)

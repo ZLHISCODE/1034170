@@ -1,0 +1,13 @@
+zl9ComLib：
+	clsDatabase
+	frmILLSelect（注意常用功能实现的相关存储过程）
+	frmPubSel
+
+ZLCISJob:
+	frmArchiveView
+	frmArchiveInMedRec(-)
+	frmArchiveOutMedRec(-)
+	clsArchiveMedRec(-)
+	frmArchiveInMedRec_HN(-)
+	frmArchiveInMedRec_SC(-)
+	frmArchiveInMedRec_YN(-)

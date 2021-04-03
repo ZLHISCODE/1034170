@@ -1,0 +1,3 @@
+VBGROUP 5.0
+StartupProject=医保接口管理.vbp
+Project=..\公共程序\ZLCommon9.0\zlInsureNew\ZLInsure.vbp

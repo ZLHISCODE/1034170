@@ -1,0 +1,10 @@
+mdlPublicDefine = 0, 0, 0, 0, C
+uCheckNorm = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+PaneOne = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+PaneTwo = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+PaneThree = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+PaneFour = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+clsReport = 44, 44, 754, 523, C
+frmReport = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+clsDisReportCard = 22, 22, 732, 501, C
+frmMain = 88, 88, 798, 567, C, 66, 66, 776, 545, C

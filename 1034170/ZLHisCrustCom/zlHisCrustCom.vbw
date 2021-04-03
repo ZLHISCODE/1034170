@@ -1,0 +1,16 @@
+frmErrAsk = 0, 0, 0, 0, C, 75, 75, 1128, 381, C
+UsrProgressBar = 0, 0, 0, 0, C, 50, 50, 1103, 356, C
+mdlDatabase = 0, 0, 0, 0, C
+clsPEReader = 0, 0, 0, 0, C
+clsRegCom = 75, 75, 1128, 381, 
+clsTrace = 125, 125, 1178, 431, 
+cls7zZip = 0, 0, 0, 0, C
+mdlHisCrust = 0, 0, 0, 0, C
+mdlPEDefine = 125, 125, 1119, 582, Z
+clsShell = 0, 0, 0, 0, C
+clsRegistry = 0, 0, 0, 0, C
+mdlPubDefine = 25, 25, 1028, 414, 
+frmHisCrust = 0, 0, 0, 0, C, 50, 50, 1103, 356, C
+mdlBusiness = 0, 0, 0, 0, C
+clsHisCrsutCom = 100, 100, 1153, 406, 
+clsConnect = 0, 0, 0, 0, C

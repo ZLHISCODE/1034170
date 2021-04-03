@@ -1,0 +1,325 @@
+--以zlTools用户的身份创建
+--创建医保支持表
+CREATE TABLE zlInsureBase(
+	险类 NUMBER(3),
+	文件名 VARCHAR2(20),
+	说明 VARCHAR2(200));
+CREATE TABLE zlInsureComponents(
+	险类 NUMBER(3),
+	用户名 VARCHAR2(20),
+	表空间 VARCHAR2(50),
+	部件 VARCHAR2(20),
+	启用 NUMBER(1));
+--1-挂号;2-门诊;3-住院;4-其他
+CREATE TABLE zlInsureOperation(
+	险类 NUMBER(3),
+	业务 NUMBER(1),
+	描述 VARCHAR2(200));
+CREATE TABLE zlInsureFuncs(
+	险类 NUMBER(3),
+	序号 NUMBER(18),	--模块序号
+	功能 VARCHAR2(30),	--模块功能
+	方法 VARCHAR2(20));	
+CREATE TABLE zlInsurePrivs(
+	险类 NUMBER(3),
+	方法 VARCHAR2(20),
+	对象 VARCHAR2(50),
+	权限 VARCHAR2(10));
+CREATE TABLE zlInsureModuls(
+	险类 NUMBER(3),
+	序号 NUMBER(18));
+
+--创建约束
+ALTER TABLE zlInsureBase ADD CONSTRAINT zlInsureBase_PK PRIMARY KEY (险类,文件名);
+ALTER TABLE zlInsureOperation ADD CONSTRAINT zlInsureOperation_PK PRIMARY KEY (险类,业务);
+ALTER TABLE zlInsureFuncs ADD CONSTRAINT zlInsureFuncs_PK PRIMARY KEY (险类,序号,功能,方法);
+ALTER TABLE zlInsurePrivs ADD CONSTRAINT zlInsurePrivs_PK PRIMARY KEY (险类,方法,对象,权限);
+ALTER TABLE zlInsureModuls ADD CONSTRAINT zlInsureModuls_PK PRIMARY KEY (险类,序号);
+
+--创建过程
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSUREBASE
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREBASE_INSERT(
+	险类_IN IN ZLINSUREBASE.险类%TYPE,
+	文件名_IN IN ZLINSUREBASE.文件名%TYPE,
+	说明_IN IN ZLINSUREBASE.说明%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSUREBASE
+	(险类,文件名,说明)
+	VALUES
+	(险类_IN,文件名_IN,说明_IN);
+END ZL_ZLINSUREBASE_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  UPDATE   for   ZLINSUREBASE
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREBASE_UPDATE(
+	险类_IN IN ZLINSUREBASE.险类%TYPE,
+	文件名_IN IN ZLINSUREBASE.文件名%TYPE,
+	说明_IN IN ZLINSUREBASE.说明%TYPE
+)
+IS
+BEGIN
+	Update ZLINSUREBASE
+	Set 险类=险类_IN,
+		文件名=文件名_IN,
+		说明=说明_IN
+	Where  险类=险类_IN And 文件名=文件名_IN;
+END ZL_ZLINSUREBASE_UPDATE;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSUREBASE
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREBASE_DELETE(
+	险类_IN IN ZLINSUREBASE.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSUREBASE
+	Where  险类=险类_IN ;
+END ZL_ZLINSUREBASE_DELETE;
+/
+
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSURECOMPONENTS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSURECOMPONENTS_INSERT(
+	险类_IN IN ZLINSURECOMPONENTS.险类%TYPE,
+	用户名_IN IN ZLINSURECOMPONENTS.用户名%TYPE,
+	表空间_IN IN ZLINSURECOMPONENTS.表空间%TYPE,
+	部件_IN IN ZLINSURECOMPONENTS.部件%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSURECOMPONENTS
+	(险类,用户名,表空间,部件)
+	VALUES
+	(险类_IN,用户名_IN,表空间_IN,部件_IN);
+END ZL_ZLINSURECOMPONENTS_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  启用，安装后缺省为停用，启用后不允许停用
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSURECOMPONENTS_START(
+	险类_IN IN ZLINSURECOMPONENTS.险类%TYPE
+)
+IS
+BEGIN
+	UPDATE ZLINSURECOMPONENTS 
+	SET 启用=1
+	WHERE 险类=险类_IN;
+END ZL_ZLINSURECOMPONENTS_START;
+/
+
+----------------------------------------------------------------------------
+---  UPDATE   for   ZLINSURECOMPONENTS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSURECOMPONENTS_UPDATE(
+	险类_IN IN ZLINSURECOMPONENTS.险类%TYPE,
+	用户名_IN IN ZLINSURECOMPONENTS.用户名%TYPE,
+	表空间_IN IN ZLINSURECOMPONENTS.表空间%TYPE,
+	部件_IN IN ZLINSURECOMPONENTS.部件%TYPE
+)
+IS
+BEGIN
+	Update ZLINSURECOMPONENTS
+	Set 用户名=用户名_IN,
+		表空间=表空间_IN,
+		部件=部件_IN
+	WHERE 险类=险类_IN;
+END ZL_ZLINSURECOMPONENTS_UPDATE;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSURECOMPONENTS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSURECOMPONENTS_DELETE(
+	险类_IN IN ZLINSURECOMPONENTS.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSURECOMPONENTS 
+	WHERE 险类=险类_IN;
+END ZL_ZLINSURECOMPONENTS_DELETE;
+/
+
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSUREOPERATION
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREOPERATION_INSERT(
+	险类_IN IN ZLINSUREOPERATION.险类%TYPE,
+	业务_IN IN ZLINSUREOPERATION.业务%TYPE,
+	描述_IN IN ZLINSUREOPERATION.描述%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSUREOPERATION
+	(险类,业务,描述)
+	VALUES
+	(险类_IN,业务_IN,描述_IN);
+END ZL_ZLINSUREOPERATION_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSUREOPERATION
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREOPERATION_DELETE(
+	险类_IN IN ZLINSUREOPERATION.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSUREOPERATION
+	Where  险类=险类_IN;
+END ZL_ZLINSUREOPERATION_DELETE;
+/
+
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSUREPRIVS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREPRIVS_INSERT(
+	险类_IN IN ZLINSUREPRIVS.险类%TYPE,
+	方法_IN IN ZLINSUREPRIVS.方法%TYPE,
+	对象_IN IN ZLINSUREPRIVS.对象%TYPE,
+	权限_IN IN ZLINSUREPRIVS.权限%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSUREPRIVS
+	(险类,方法,对象,权限)
+	VALUES
+	(险类_IN,方法_IN,对象_IN,权限_IN);
+END ZL_ZLINSUREPRIVS_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSUREPRIVS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREPRIVS_DELETE(
+	险类_IN IN ZLINSUREPRIVS.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSUREPRIVS
+	Where  险类=险类_IN ;
+END ZL_ZLINSUREPRIVS_DELETE;
+/
+
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSUREFUNCS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREFUNCS_INSERT(
+	险类_IN IN ZLINSUREFUNCS.险类%TYPE,
+	序号_IN IN ZLINSUREFUNCS.序号%TYPE,
+	功能_IN IN ZLINSUREFUNCS.功能%TYPE,
+	方法_IN IN ZLINSUREFUNCS.方法%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSUREFUNCS
+	(险类,序号,功能,方法)
+	VALUES
+	(险类_IN,序号_IN,功能_IN,方法_IN);
+END ZL_ZLINSUREFUNCS_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSUREFUNCS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREFUNCS_DELETE(
+	险类_IN IN ZLINSUREFUNCS.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSUREFUNCS
+	Where  险类=险类_IN;
+END ZL_ZLINSUREFUNCS_DELETE;
+/
+
+
+----------------------------------------------------------------------------
+---  INSERT   for   ZLINSUREMODULS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREMODULS_INSERT(
+	险类_IN IN ZLINSUREMODULS.险类%TYPE,
+	序号_IN IN ZLINSUREMODULS.序号%TYPE
+)
+IS
+BEGIN
+	Insert Into ZLINSUREMODULS
+	(险类,序号)
+	VALUES
+	(险类_IN,序号_IN);
+END ZL_ZLINSUREMODULS_INSERT;
+/
+
+----------------------------------------------------------------------------
+---  DELETE   for   ZLINSUREMODULS
+----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE ZL_ZLINSUREMODULS_DELETE(
+	险类_IN IN ZLINSUREMODULS.险类%TYPE
+)
+IS
+BEGIN
+	Delete From ZLINSUREMODULS
+	Where  险类=险类_IN;
+END ZL_ZLINSUREMODULS_DELETE;
+/
+
+
+--创建同义词
+DROP PUBLIC SYNONYM zlInsureBase;
+DROP PUBLIC SYNONYM zlInsureComponents ;
+DROP PUBLIC SYNONYM zlInsureOperation ;
+DROP PUBLIC SYNONYM zlInsureFuncs ;
+DROP PUBLIC SYNONYM zlInsurePrivs ;
+DROP PUBLIC SYNONYM zlInsureModuls ;
+CREATE PUBLIC SYNONYM zlInsureBase FOR zlInsureBase;
+CREATE PUBLIC SYNONYM zlInsureComponents FOR zlInsureComponents;
+CREATE PUBLIC SYNONYM zlInsureOperation FOR zlInsureOperation;
+CREATE PUBLIC SYNONYM zlInsureFuncs FOR zlInsureFuncs;
+CREATE PUBLIC SYNONYM zlInsurePrivs FOR zlInsurePrivs;
+CREATE PUBLIC SYNONYM zlInsureModuls FOR zlInsureModuls;
+GRANT ALL ON zlInsureBase TO PUBLIC ;
+GRANT ALL ON zlInsureComponents TO PUBLIC ;
+GRANT ALL ON zlInsureOperation TO PUBLIC ;
+GRANT ALL ON zlInsureFuncs TO PUBLIC ;
+GRANT ALL ON zlInsurePrivs TO PUBLIC ;
+GRANT ALL ON zlInsureModuls TO PUBLIC ;
+
+CREATE PUBLIC SYNONYM ZL_ZLINSUREBASE_INSERT FOR ZL_ZLINSUREBASE_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREBASE_UPDATE FOR ZL_ZLINSUREBASE_UPDATE;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREBASE_DELETE FOR ZL_ZLINSUREBASE_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSURECOMPONENTS_INSERT FOR ZL_ZLINSURECOMPONENTS_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSURECOMPONENTS_UPDATE FOR ZL_ZLINSURECOMPONENTS_UPDATE;
+CREATE PUBLIC SYNONYM ZL_ZLINSURECOMPONENTS_DELETE FOR ZL_ZLINSURECOMPONENTS_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREOPERATION_INSERT FOR ZL_ZLINSUREOPERATION_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREOPERATION_DELETE FOR ZL_ZLINSUREOPERATION_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREPRIVS_INSERT FOR ZL_ZLINSUREPRIVS_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREPRIVS_DELETE FOR ZL_ZLINSUREPRIVS_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREFUNCS_INSERT FOR ZL_ZLINSUREFUNCS_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREFUNCS_DELETE FOR ZL_ZLINSUREFUNCS_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREMODULS_INSERT FOR ZL_ZLINSUREMODULS_INSERT;
+CREATE PUBLIC SYNONYM ZL_ZLINSUREMODULS_DELETE FOR ZL_ZLINSUREMODULS_DELETE;
+CREATE PUBLIC SYNONYM ZL_ZLINSURECOMPONENTS_START FOR ZL_ZLINSURECOMPONENTS_START;
+
+GRANT EXECUTE ON ZL_ZLINSUREBASE_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREBASE_UPDATE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREBASE_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSURECOMPONENTS_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSURECOMPONENTS_UPDATE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSURECOMPONENTS_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREOPERATION_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREOPERATION_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREPRIVS_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREPRIVS_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREFUNCS_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREFUNCS_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREMODULS_INSERT TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSUREMODULS_DELETE TO PUBLIC ;
+GRANT EXECUTE ON ZL_ZLINSURECOMPONENTS_START TO PUBLIC ;

@@ -1,0 +1,173 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=F:\2011年工作\电子病历接口\VBDEMO
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+D:\WINDOWS\system32\msxml3.dll=
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+
+[Package|Dep File 1|Files Added]
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+F:\2011年工作\电子病历接口\VBDEMO\test1.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\WINDOWS\system32\oleaut32.dll=Yes
+D:\WINDOWS\system32\olepro32.dll=Yes
+D:\WINDOWS\system32\asycfilt.dll=Yes
+D:\WINDOWS\system32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=Yes
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=Yes
+D:\WINDOWS\system32\msxml3.dll=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=
+
+[Package|Dep File 1|Install Locations]
+F:\2011年工作\电子病历接口\VBDEMO\test1.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=$(WinSysPath)
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=$(WinSysPath)
+D:\WINDOWS\system32\msxml3.dll=$(WinSysPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=
+
+[Package|Dep File 1|DepFile]
+DepCabFile=test1.CAB
+DepCabRun=test1.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=F:\2011年工作\电子病历接口\VBDEMO
+ProjectFolder=F:\2011年工作\电子病历接口\VBDEMO
+ServerSideCab=
+File1=F:\2011年工作\电子病历接口\VBDEMO\test1.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=F:\2011年工作\电子病历接口\VBDEMO\setup
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+D:\WINDOWS\system32\msxml3.dll=
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+F:\2011年工作\电子病历接口\VBDEMO\test1.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\WINDOWS\system32\oleaut32.dll=Yes
+D:\WINDOWS\system32\olepro32.dll=Yes
+D:\WINDOWS\system32\asycfilt.dll=Yes
+D:\WINDOWS\system32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=Yes
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=Yes
+D:\WINDOWS\system32\msxml3.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+F:\2011年工作\电子病历接口\VBDEMO\test1.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\Program Files\东方中讯数字证书管理工具(卫生系统专用)\SanitationSystemClient.dll=$(WinSysPath)
+D:\Program Files\Common Files\MSSoap\Binaries\MSSOAP30.dll=$(WinSysPath)
+D:\WINDOWS\system32\msxml3.dll=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+F:\2011年工作\电子病历接口\VBDEMO\test1.exe=Yes
+
+[Package|Standard Setup Package 1|DepFile]
+DepCabFile=test1.CAB
+DepCabRun=test1.INF
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=VBDEMO
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=VBDEMO
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|VBDEMO]
+Icon1=test1.exe
+Title1=VBDEMO
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=F:\2011年工作\电子病历接口\VBDEMO\setup
+ProjectFolder=F:\2011年工作\电子病历接口\VBDEMO
+ServerSideCab=
+File1=F:\2011年工作\电子病历接口\VBDEMO\setup\setup.exe
+File2=F:\2011年工作\电子病历接口\VBDEMO\setup\Setup.Lst
+File3=F:\2011年工作\电子病历接口\VBDEMO\setup\test1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

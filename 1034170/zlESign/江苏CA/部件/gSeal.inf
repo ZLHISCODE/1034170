@@ -1,0 +1,44 @@
+;INF file for gSeal.ocx
+;DestDir can be 10 for Windows directory, 11 for Windows\System(32) directory, or left blank for the Occache directory.
+
+[version]
+	signature="$CHICAGO$"
+	AdvancedINF=2.0
+[Add.Code]
+	gSeal.dll=gSeal.dll
+	gSeal.ocx=gSeal.ocx
+	ftjsfile.dll=ftjsfile.dll
+	ftjsca2000file.dll=ftjsca2000file.dll
+        FsKernel.dll=FsKernel.dll
+[gSeal.dll]
+	file-win32-x86=thiscab
+	RegisterServer=yes
+	FileVersion=1,0,1,3
+	DestDir=11
+[gSeal.ocx]
+	file-win32-x86=thiscab
+	clsid={C02DECFC-D82E-4F22-A8A9-9476AA1A7EB0}
+	RegisterServer=yes
+	FileVersion=1,0,0,2
+	DestDir=11
+[ftjsfile.dll]
+	file-win32-x86=thiscab
+	RegisterServer=yes
+	FileVersion=1,0,10,408
+	DestDir=11
+[ftjsca2000file.dll]
+	file-win32-x86=thiscab
+	RegisterServer=yes
+	FileVersion=1,0,10,225
+	DestDir=11
+
+[FsKernel.dll]
+	file-win32-x86=thiscab
+	RegisterServer=yes
+	FileVersion=1,0,9,706
+	DestDir=11
+
+
+
+
+
